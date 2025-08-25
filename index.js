@@ -82,3 +82,7 @@ client.on('messageCreate', (message) => {
 
 // .envからトークンを取得してログイン
 client.login(process.env.DISCORD_BOT_TOKEN);
+
+Deno.cron("Continuous Request", "*/2 * * * *", () => {
+    console.log("running...");
+});
